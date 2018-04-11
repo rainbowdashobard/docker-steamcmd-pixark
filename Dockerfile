@@ -18,9 +18,8 @@ apt-get install -y binutils ca-certificates libgcc1:i386 libstdc++6:i386 libtbb2
 export WINEARCH='win64';wine wineboot --init; steamcmd +quit; steamcmd +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir /home/pixark +app_update 824360 validate +quit; \
 rm -rf /root/.steam/logs/* /var/lib/apt/lists/* /tmp/*
 
-RUN mkdir -p /home/pixark
-WORKDIR /home
-ADD rungame.sh pixark/
+WORKDIR /home/pixark
+ADD rungame.sh /
 RUN ["chmod", "+x", "/home/pixark/rungame.sh"]
 
 CMD ["/home/config/rungame.sh"]
