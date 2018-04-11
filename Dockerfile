@@ -5,7 +5,9 @@ MAINTAINER rainbowdashboard
 ENV DEBIAN_FRONTEND=noninteractive
 
 ADD steamcmd.tar.xz /
-copy rungame.sh /home/config
+COPY rungame.sh /home/config
+
+RUN ["chmod", "+x", "/home/config/rungame.sh"]
 
 EXPOSE 27015/tcp
 EXPOSE 27015/udp
