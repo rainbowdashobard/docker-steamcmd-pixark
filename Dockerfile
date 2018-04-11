@@ -19,7 +19,4 @@ apt-get install -y binutils ca-certificates libgcc1:i386 libstdc++6:i386 libtbb2
 export WINEARCH='win64';wine wineboot --init; steamcmd +quit; steamcmd +@sSteamCmdForcePlatformType windows +login anonymous +force_install_dir /home/pixark +app_update 824360 validate +quit; \
 rm -rf /root/.steam/logs/* /var/lib/apt/lists/* /tmp/*
 
-RUN ["chmod", "+x", "/home/pixark/run-game.sh"]
-RUN mv run-game.sh /home/pixark/run-game.sh
-
-CMD ["/home/config/run-game.sh"]
+CMD ["steamcmd"]
