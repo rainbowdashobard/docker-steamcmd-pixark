@@ -7,8 +7,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ADD steamcmd.tar.xz /
 COPY rungame.sh /home/config
 
-RUN mkdir -p /home/config
-RUN ["chmod", "+x", "/home/config/rungame.sh"]
+RUN mkdir -p /home/pixark
+RUN ["chmod", "+x", "/home/pixark/rungame.sh"]
 
 EXPOSE 27015/tcp
 EXPOSE 27015/udp
