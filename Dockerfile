@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ADD steamcmd.tar.xz /
 COPY rungame.sh /home/config
 
+RUN mkdir -p /home/config
 RUN ["chmod", "+x", "/home/config/rungame.sh"]
 
 EXPOSE 27015/tcp
