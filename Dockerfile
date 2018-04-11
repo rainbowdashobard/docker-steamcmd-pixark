@@ -19,7 +19,8 @@ export WINEARCH='win64';wine wineboot --init; steamcmd +quit; steamcmd +@sSteamC
 rm -rf /root/.steam/logs/* /var/lib/apt/lists/* /tmp/*
 
 RUN mkdir -p /home/pixark
-ADD rungame.sh /home/pixark/
+WORKDIR /home
+ADD rungame.sh pixark/
 RUN ["chmod", "+x", "/home/pixark/rungame.sh"]
 
 CMD ["/home/config/rungame.sh"]
