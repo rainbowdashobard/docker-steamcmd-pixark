@@ -1,0 +1,1 @@
+wine64 /home/pixark/ShooterGame/Binaries/Win64/PixARKServer.exe "CubeWorld_Light?listen?MaxPlayers=8?SessionName=CoolServer?Port=27015?QueryPort=27016?RCONPort=27017?ServerPassword=butts?CULTUREFORCOOKING=en" -NoBattlEye -CubePort=15000 -cubeworld=world -nosteamclient -NoHangDetection -game -server -log
