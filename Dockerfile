@@ -21,4 +21,4 @@ rm -rf /root/.steam/logs/* /var/lib/apt/lists/* /tmp/*
 RUN mv /run-game.sh /home/pixark/run-game.sh
 RUN chmod +x /home/pixark/run-game.sh
 
-CMD ["steamcmd"]
+CMD ["/home/pixark/run-game.sh"]
