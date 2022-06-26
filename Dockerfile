@@ -13,6 +13,8 @@ EXPOSE 27016/tcp
 EXPOSE 27016/udp
 EXPOSE 27017/tcp
 EXPOSE 27017/udp
+EXPOSE 15000/tcp
+EXPOSE 15000/udp
 
 RUN dpkg --add-architecture i386; apt-get update; \
 apt-get install -y binutils ca-certificates libgcc1:i386 libstdc++6:i386 libtbb2:i386 libterm-ui-perl locales locales-all net-tools wine wine32 wine64 libwine libwine:i386 fonts-wine; \
